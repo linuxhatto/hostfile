@@ -1,7 +1,27 @@
-127.0.0.1   localhost
-192.168.99.101  master  master.local
-192.168.99.102  slave   slave.local
-9.9.9.9 carlao
+172.28.128.4 chef-master chef-master
+
+##### Level 3 Monitoring Servers ################
+189.125.185.233 cta-ger-hpom-01.level3dc.br     cta-ger-hpom-01
+189.125.185.234 cta-ger-hpom-02.level3dc.br     cta-ger-hpom-02
+189.125.185.164 hpom-01.level3dc.br     hpom-01
+189.125.185.165 hpom-02.level3dc.ar     hpom-02
+189.125.185.166 ats-sv-hpo-03.level3dc.ar     ats-sv-hpo-03
+189.125.185.167 ats-sv-hpo-04.level3dc.ar     ats-sv-hpo-04
+##### End Level 3 Monitoring Servers #############
+
+
+
+######### Infra de backup 7.6.0.4  São Paulo ##########
+189.125.185.110           clunbusp                      clunbusp .level3dc.br # Master server
+189.125.185.105           clunbusp01                  clunbusp01.level3dc.br
+189.125.185.106           clunbusp02                  clunbusp02 .level3dc.br
+189.125.185.107           medianbusp01              medianbusp01 .level3dc.br
+189.125.185.108           medianbusp02              medianbusp02 .level3dc.br
+189.125.185.83             nbu-opscenter              nbu-opscenter.globaldc.local
+189.125.185.95             nbu-opscenter02           nbu-opscenter02.globaldc.local
+10.220.2.254                 gerbackup
+
+
 <% @hosts.each do |node| %>
 <%= node['ipaddress'] %> <%= node['hostname'] %> <%= node['fqdn'] %>
 <% end %>
