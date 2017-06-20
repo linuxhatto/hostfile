@@ -17,4 +17,5 @@ variables(
     :hostname => node[:hostname],
     :fqdn => node[:fqdn]
 )
+  action  :create_if_missing
 end
