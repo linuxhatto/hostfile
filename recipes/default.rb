@@ -17,5 +17,5 @@ variables(
     :hostname => node[:hostname],
     :fqdn => node[:fqdn]
 )
-  action  :append
+  action  :create
 end
